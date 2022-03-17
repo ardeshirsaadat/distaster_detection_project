@@ -37,7 +37,7 @@ def load_data(database_filepath):
     database_file_path = 'sqlite:///' + database_filepath
     engine = create_engine(database_file_path)
     df = pd.read_sql_table('disaster_table', engine)
-    df.related.replace(2, 1, inplace=True)
+
     X = df['message'].values
     y = df.iloc[:, 4:].values
     category_names = df.columns[4:].to_list()

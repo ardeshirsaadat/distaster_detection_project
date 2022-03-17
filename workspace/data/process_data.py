@@ -59,6 +59,8 @@ Returns:
 
     # drop duplicates
     df.drop_duplicates(subset=['id'], inplace=True)
+    #  replace values of 2 by 1
+    df.related.replace(2, 1, inplace=True)
 
     return df
 
