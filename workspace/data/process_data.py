@@ -76,7 +76,7 @@ Returns:
     engine_name = 'sqlite:///' + database_filename
     engine = create_engine(engine_name)
     database_name = database_filename[:-3]
-    df.to_sql('disaster_table', engine, index=False)
+    df.to_sql('disaster_table', engine, index=False, if_exists='replace')
 
 
 def main():
